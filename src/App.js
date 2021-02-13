@@ -1,5 +1,6 @@
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from "react-apollo";
+import Courses from './components/Courses'
 import './App.css';
 
 const client = new ApolloClient({
@@ -9,7 +10,9 @@ const client = new ApolloClient({
 function App() {
   return (
       <ApolloProvider client={client}>
-        <h2>My first Apollo React Application</h2>
+        <div>
+          <Courses />
+        </div>
         </ApolloProvider>
   );
 }
